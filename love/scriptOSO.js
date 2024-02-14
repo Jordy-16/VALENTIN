@@ -282,7 +282,7 @@ document.body.addEventListener('keyup', handleKeyUp);
 const letItRain = new Date().getHours() % 2;
 if (letItRain) {
   // Create a random number of rain drops and animate them.
-  for (let d = 0; d < Math.floor(Math.random() * 5); d++) {
+  for (let d = 0; d < Math.floor(Math.random() * 25); d++) {
     // Create an SVG droplet and append it to the DOM
     const droplet = document.querySelector('svg').cloneNode();
     droplet.setAttribute('viewBox', '0 0 5 50');
@@ -296,7 +296,4 @@ if (letItRain) {
     droplet.innerHTML = `<path d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>`;
     $RAIN.appendChild(droplet);
   }
-  const mensajeElemento = document.getElementById('mensaje');
-mensajeElemento.textContent = 'COMO ESTE OSITO SI UNA VEZ ESTAS TRISTE QUIERO SER ESA PERSONA QUE TE PUEDE VOLVER FELIZ SIN QUE TE PREOCUPES.';
-
 }
