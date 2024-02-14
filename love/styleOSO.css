@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
   -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
 }
-
 body {
+  
   min-height: 100vh;
   overflow: hidden;
   display: flex;
@@ -14,24 +14,22 @@ body {
   justify-content: center;
   opacity: 0;
 }
-
 @media (prefers-color-scheme: dark) {
   body {
     background: #271722;
   }
 }
-
 .mensaje {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #271722; /* Color de fondo del mensaje */
-  color: white; /* Color del texto del mensaje */
-  padding: 10px; /* Espaciado interior del mensaje */
-  font-size: 18px; /* Tamaño de fuente del mensaje */
-  text-align: center; /* Alineación del texto en el mensaje */
-  z-index: 50; /* Capa superior para que esté por encima de otros elementos */
+  color: #f5efef; /* Color del texto del mensaje (negro) */
+  padding: 10px; /* Espaciado interno del mensaje */
+  text-align: center; /* Alineación del texto */
+  z-index: 9999; /* Asegura que el mensaje esté por encima de otros elementos */
+  font-style: italic; /* Estilo de letra en cursiva */
 }
 
 .heart {
@@ -42,11 +40,6 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-/* CSS para ocultar el mensaje */
-.oculto {
-  display: none;
-}
-
 .heart svg {
   height: 100%;
   width: 100%;
@@ -141,7 +134,7 @@ span {
   z-index: -1;
 }
 .rain svg path {
-  fill: #cfcec6;
+  fill: #a1c6cc;
   stroke: none;
   opacity: var(--o);
   transform: scaleY(calc(var(--s) * 1.5));
@@ -163,18 +156,4 @@ span {
     opacity: 0;
     transform: translateY(75vmin);
   }
-
-  .mensaje {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo del mensaje */
-    color: white; /* Color del texto del mensaje */
-    padding: 10px; /* Espaciado interior del mensaje */
-    font-size: 18px; /* Tamaño de fuente del mensaje */
-    text-align: center; /* Alineación del texto en el mensaje */
-    z-index: 9999; /* Capa superior para que esté por encima de otros elementos */
-  }
-  
 }
